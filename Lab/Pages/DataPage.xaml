@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab.Pages.DataPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblNombre" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+            <Label Text="Edad" Grid.Row="1" Grid.Column="0"></Label>
+            <Entry x:Name="txtEdad" Placeholder="Años" Grid.Row="1" Grid.Column="1" Keyboard="Numeric"></Entry>
+
+            <Label Text="Peso" Grid.Row="2" Grid.Column="0"></Label>
+            <Entry x:Name="txtPeso" Placeholder="Kgs" Grid.Row="2" Grid.Column="1" Keyboard="Numeric"></Entry>
+
+            <Label Text="Altura" Grid.Row="3" Grid.Column="0"></Label>
+            <Entry x:Name="txtAltura" Placeholder="Mts" Grid.Row="3" Grid.Column="1" Keyboard="Numeric"></Entry>
+
+            <Button x:Name="btnIMC" Text="Calcular IMC" Grid.Row="4" Grid.Column="0"></Button>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

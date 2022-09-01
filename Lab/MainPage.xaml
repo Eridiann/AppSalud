@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab.MainPage">
+
+    <StackLayout>
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Caduceus.svg/800px-Caduceus.svg.png"/>
+        <Label x:Name="lblBienvenida" Text="Bienvenido a la App de salud!"></Label>
+        <Entry x:Name="txtNombre" Placeholder="Nombre"></Entry>
+        <Button x:Name="btnEntrar" Text="Entrar"></Button>
+    </StackLayout>
+
+</ContentPage>
