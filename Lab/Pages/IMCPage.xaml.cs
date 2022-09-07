@@ -16,6 +16,10 @@ namespace Lab.Pages
         public IMCPage(Persona persona)
         {
             InitializeComponent();
+            aiCargando.IsRunning = true;
+            btnRecomendaciones.IsEnabled = false;
+
+            aiCargando.IsRunning = false;
 
             var IMC = persona.Peso / (persona.Altura * persona.Altura);
 
@@ -35,14 +39,23 @@ namespace Lab.Pages
             {
                 lblResult.Text = "Obesidad";
                 lblResult.BackgroundColor = Color.Orange;
-                imgIMC.Source = new Uri("");
+                imgIMC.Source = new Uri("https://static.wikia.nocookie.net/shrek/images/3/3f/Portada_img.jpg/revision/latest?cb=20100719002911&path-prefix=es");
             }
             else
             {
                 lblResult.Text = "Obesidad Severa";
                 lblResult.BackgroundColor = Color.DarkRed;
-                imgIMC.Source = new Uri("");
+                imgIMC.Source = new Uri("https://static.wikia.nocookie.net/hollowknight/images/2/24/Bardoon.png/revision/latest?cb=20180212215159&path-prefix=es");
             }
+
+            btnRecomendaciones.IsEnabled = true;
+
+            btnRecomendaciones.Clicked += BtnRecomendaciones_Clicked;
+        }
+
+        private void BtnRecomendaciones_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RecomendacionesPage(lblResult.Text));
         }
     }
 }

@@ -6,6 +6,8 @@
         <StackLayout>
             <Image x:Name="imgIMC"></Image>
             <Label x:Name="lblResult"></Label>
+            <Button x:Name="btnRecomendaciones" Text="Recomendaciones"></Button>
+            <ActivityIndicator x:Name="aiCargando" IsRunning="False" Color="Violet"></ActivityIndicator>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
