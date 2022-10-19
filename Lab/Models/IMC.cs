@@ -6,15 +6,16 @@
 //
 //    var imc = Imc.FromJson(jsonString);
 
-using System;
-using System.Collections.Generic;
-
-using System.Globalization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-
 namespace Lab.Models
 {
+
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
     public partial class IMC
     {
         [JsonProperty("id")]
@@ -35,12 +36,12 @@ namespace Lab.Models
 
     public partial class IMC
     {
-        public static IMC FromJson(string json) => JsonConvert.DeserializeObject<IMC>(json, Lab.Models.Converter.Settings);
+        public static List<IMC> FromJson(string json) => JsonConvert.DeserializeObject<List<IMC>>(json, Lab.Models.Converter.Settings);
     }
 
     public static class SerializeIMC
     {
-        public static string ToJson(this IMC self) => JsonConvert.SerializeObject(self, Lab.Models.Converter.Settings);
+        public static string ToJson(this List<IMC> self) => JsonConvert.SerializeObject(self, Lab.Models.Converter.Settings);
     }
 
     internal static class ConverterIMC

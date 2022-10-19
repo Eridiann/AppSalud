@@ -47,7 +47,7 @@ namespace Lab.Pages
             imc.Imc = imc.Peso / (imc.Altura * imc.Altura);
 
             string imcJson = JsonConvert.SerializeObject(imc);
-            StringContent content = new StringContent(imcJson, Encoding.UTF8, "application");
+            StringContent content = new StringContent(imcJson, Encoding.UTF8, "application/json");
 
             var respuesta = await httpClient.PostAsync(url, content);
 
