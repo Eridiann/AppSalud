@@ -6,9 +6,9 @@
     <StackLayout>
         <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Caduceus.svg/800px-Caduceus.svg.png"/>
         <Label x:Name="lblBienvenida" Text="Bienvenido a la App de salud!"></Label>
-        <Entry x:Name="txtNombre" Placeholder="Nombre"></Entry>
-        <Entry x:Name="txtPassword" Placeholder="Contraseña"></Entry>
-        <Entry x:Name="txtEmail" Placeholder="Email"></Entry>
+        <Entry x:Name="txtNombre" Text="Dani"></Entry>
+        <Entry x:Name="txtPassword" Text="studenT1."></Entry>
+        <Entry x:Name="txtEmail" Text="dani@school.com"></Entry>
 
         <Button x:Name="btnEntrar" Text="Entrar"></Button>
         <Button x:Name="btnRegistrar" Text="Registrar"></Button>

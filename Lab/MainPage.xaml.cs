@@ -97,7 +97,8 @@ namespace Lab
 
                     string miToken = token.TokenToken.ToString();
                     await SecureStorage.SetAsync("Token", miToken);
-                    await Navigation.PushAsync(new DataPage(txtNombre.Text.ToString()));
+                    //await Navigation.PushAsync(new DataPage(txtNombre.Text.ToString()));
+                    await Navigation.PushAsync(new RegistrosPage());
                 }
                 else
                 {

@@ -21,6 +21,7 @@ namespace Lab.Pages
 		public RegistrosPage ()
 		{
 			InitializeComponent ();
+			ObtenerRegistros();
 		}
 
 		private async void ObtenerRegistros()
@@ -44,6 +45,47 @@ namespace Lab.Pages
 				ListView listView = new ListView();
 
 				listView.ItemsSource = listaRegistros;
+
+				listView.ItemTemplate = new DataTemplate(() =>
+                {
+					Label peso = new Label();
+					peso.SetBinding(Label.TextProperty, "Peso");
+
+					Label altura = new Label();
+					altura.SetBinding(Label.TextProperty, "Altura");
+
+					Label imc = new Label();
+					imc.SetBinding(Label.TextProperty, "Imc");
+
+
+					return new ViewCell
+					{
+						View = new StackLayout
+						{
+							Orientation = StackOrientation.Vertical,
+							VerticalOptions = LayoutOptions.Center,
+							Children =
+							{
+								new StackLayout
+								{
+									Orientation = StackOrientation.Horizontal,
+									VerticalOptions = LayoutOptions.Center,
+									Children =
+									{
+										peso, altura, imc
+									}
+								}
+							}
+						}
+					};
+				});
+				this.Content = new StackLayout
+				{
+					Children =
+                    {
+						listView
+                    }
+				};
             }
 			else
             {
